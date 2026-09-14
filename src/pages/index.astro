@@ -1,279 +1,127 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout>
   <main>
-    <section class="contact-top">
-      <div class="contact-text">
-        <h1>CONTACT<br />US</h1>
+    <section class="hero">
+      <div class="overlay"></div>
 
-        <p>Want to get in touch?</p>
+      <div class="hero-content">
+        <img src="/forside-logo.png" alt="Impact Festival" class="hero-logo" />
 
-        <p>
-          For <strong>group tickets & business inquiries please email</strong>
-          <a href="mailto:impact@trifo.dk">impact@trifo.dk</a>
-        </p>
-
-        <p>
-          For <strong>partnerships</strong> please email Anne Katrine Heje Larsen, Head of Impact and Partnerships, at
-          <a href="mailto:akh@trifo.dk"> akh@trifo.dk</a>
-        </p>
-
-        <p>For general questions, please fill out the form below.</p>
-
-        <form>
-          <label>Name</label>
-
-          <div class="name-row">
-            <div>
-              <label>First Name <span>(required)</span></label>
-              <input type="text" />
-            </div>
-
-            <div>
-              <label>Last Name <span>(required)</span></label>
-              <input type="text" />
-            </div>
-          </div>
-
-          <label>Email <span>(required)</span></label>
-          <input type="email" />
-
-          <label>Message <span>(required)</span></label>
-          <textarea></textarea>
-        </form>
-      </div>
-
-      <div class="contact-image">
-        <img src="/contact-billede.jpg" alt="Impact Festival" />
-      </div>
-    </section>
-
-    <section class="contact-bottom">
-      <div class="bottom-left">
-        <div class="socials">
-          <img src="/instagram-logo.png" alt="Instagram" />
-          <a href="#">in</a>
-          <a href="#">f</a>
+        <div class="festival-info">
+          <span>TRIFOLIUM</span>
+          <span>11–12 SEP 2026</span>
         </div>
 
-        <img src="/impact-logo.png" alt="Impact Festival" class="bottom-logo" />
-      </div>
-
-      <div class="bottom-right">
-        <div class="info-row">
-          <div class="location">
-            <h2>Location</h2>
-            <p>
-              Bådehavnsgade 42<br />
-              2450, København SV
-            </p>
-          </div>
-
-          <div class="contact-info">
-            <h2>Contact</h2>
-            <a href="mailto:impact@trifo.dk">impact@trifo.dk</a>
-          </div>
+        <div class="festival-text">
+          <p>MUSIC // ART // TALKS // WORKSHOPS // FOOD</p>
+          <p>DESIGNED TO INCREASE OUR IMPACT</p>
         </div>
-
-        <p class="company-text">
-          IMPACT FESTIVAL is organized by Forening Impact, Sydhavnen, CVR no. 46334272, Bådehavnsgade 42, 2450 Copenhagen SV. Tickets are sold through <a href="#">billetsalg.dk</a>
-        </p>
+        <a href="/tickets" class="ticket-button">TICKETS</a>
       </div>
+  
     </section>
   </main>
+
 </Layout>
 
 <style>
-  main {
+  .hero {
     width: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    color: black;
-  }
-
-  .contact-top {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 70px;
-    padding: 50px 60px 0;
-    box-sizing: border-box;
-  }
-
-  .contact-text h1 {
-    margin: 0 0 20px;
-    font-size: 75px;
-    line-height: 0.8;
-    font-weight: 900;
-    color: black;
-  }
-
-  .contact-text p {
-    max-width: 620px;
-    margin: 28px 0;
-    font-size: 17px;
-    line-height: 1.5;
-  }
-
-  .contact-text a {
-    color: black;
-  }
-
-  form {
-    max-width: 620px;
-    margin-top: 60px;
-  }
-
-  form label {
-    display: block;
-    margin: 15px 0 7px;
-    font-size: 15px;
-  }
-
-  form span {
-    color: #666;
-  }
-
-  .name-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-  }
-
-  input {
-    width: 100%;
-    height: 48px;
-    border: 1.5px solid black;
-    border-radius: 30px;
-    box-sizing: border-box;
-  }
-
-  textarea {
-    width: 100%;
-    height: 150px;
-    border: 1.5px solid black;
-    border-radius: 25px;
-    box-sizing: border-box;
-  }
-
-  .contact-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 0;
-  }
-
-  .contact-bottom {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    min-height: 500px;
-    padding: 60px;
-    box-sizing: border-box;
-  }
-
-  .bottom-left {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 0 40px;
-    box-sizing: border-box;
-  }
-
-  .socials {
+    min-height: 850px;
+    position: relative;
+    background: white;
     display: flex;
     align-items: center;
-    gap: 30px;
-  }
-
-  .socials img {
-    width: 35px;
-    height: 35px;
-    object-fit: contain;
-  }
-
-  .socials a {
-    color: black;
-    text-decoration: none;
-    font-size: 30px;
-    font-weight: 700;
-  }
-
-  .bottom-logo {
-    width: 430px;
-    max-width: 100%;
-    height: auto;
-  }
-
-  .bottom-right {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
+    overflow: hidden;
+  }
 
-    padding-left: 300px;
-    padding-right: 20px;
-
+  .hero-content {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    padding: 80px 20px;
     box-sizing: border-box;
   }
 
-  .info-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 70px;
+  .hero-logo {
+    width: 1100px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
   }
 
-  .bottom-right h2 {
-    margin: 0 0 35px;
-    font-size: 34px;
-    font-weight: 800;
+  .festival-info {
+    width: 1100px;
+    max-width: 72vw;
+    margin: -40px auto 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 32px;
+    font-weight: 700;
     color: black;
   }
 
-  .bottom-right p,
-  .bottom-right a {
-    color: black;
-    font-size: 18px;
-    line-height: 1.5;
+  .festival-text {
+    margin-top: 55px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ed0b15;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2;
   }
 
-  .location p {
-    margin: 0;
+  .festival-text p {
+    margin: 5px 0;
   }
+  .ticket-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  .company-text {
-    max-width: 600px;
-    margin: 55px 0 0;
-  }
+  width: 230px;
+  height: 75px;
+  margin: 100px auto 0;
 
-  @media (max-width: 800px) {
-    .contact-top,
-    .contact-bottom {
-      grid-template-columns: 1fr;
+  background-color: #ed0b15;
+  color: white;
+  border: 2px solid white;
+  border-radius: 50px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+  @media (max-width: 900px) {
+    .hero {
+      min-height: 650px;
     }
 
-    .contact-top {
-      padding: 40px 25px;
+    .hero-logo {
+      width: 100%;
     }
 
-    .contact-bottom {
-      padding: 40px 25px;
+    .festival-info {
+      max-width: 90vw;
+      margin-top: -10px;
+      font-size: 18px;
     }
 
-    .name-row,
-    .info-row {
-      grid-template-columns: 1fr;
+    .festival-text {
+      margin-top: 35px;
+      font-size: 16px;
     }
-
-    .bottom-left,
-    .bottom-right {
-      padding: 30px 0;
-    }
-
-    .bottom-logo {
-      margin-top: 70px;
-    }
-  }
+    
+ 
 </style>
