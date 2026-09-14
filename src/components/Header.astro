@@ -8,6 +8,7 @@
   </div>
 
   <nav class="menu">
+   <a href="/">FORSIDE</a>
 
     <div class="dropdown">
       <a href="/" class="menu-link">
@@ -15,7 +16,6 @@
 </a>
 
       <div class="dropdown-content">
-        <a href="/">FORSIDE</a>
         <a href="/about">ABOUT</a>
        <a href="/think-global">THINK GLOBAL - ACT LOCAL</a>
         <a href="/trifolium">ABOUT TRIFOLIUM</a>
@@ -47,7 +47,7 @@
     <a href="#">TICKETS</a>
     <a href="#">NEWSLETTER</a>
 
-    <!-- SOCIALE MEDIER -->
+
     <div class="socials">
       <a href="#">
         <img src="/instagram-logo.png" alt="Instagram" class="instagram-logo" />
@@ -79,7 +79,7 @@
     z-index: 1000;
   }
 
-  /* VENSTRE SIDE */
+
 
   .header-left {
     display: flex;
@@ -104,13 +104,19 @@
     display: block;
   }
 
-  /* MENU */
+
 
   .menu {
     display: flex;
     align-items: center;
     gap: 35px;
   }
+  
+  .menu > a {
+  display: flex;
+  align-items: center;
+  height: 55px;
+}
 
   .menu a {
     color: black;
@@ -121,7 +127,7 @@
     font-weight: 400;
   }
 
-  /* PIL */
+
 
   .arrow {
     display: inline-block;
@@ -129,12 +135,13 @@
     transform: translateY(-3px);
   }
 
-  /* DROPDOWN */
-
-  .dropdown {
-    position: relative;
-    padding: 20px 0;
-  }
+.dropdown {
+  position: relative;
+  padding: 0;
+  height: 55px;
+  display: flex;
+  align-items: center;
+}
 
   .dropdown-content {
     display: none;
@@ -157,7 +164,6 @@
     z-index: 9999;
   }
 
-  /* Dropdown links */
 
   .dropdown-content a {
     display: block;
@@ -176,13 +182,11 @@
     white-space: nowrap;
   }
 
-  /* Holder dropdown åben */
 
   .dropdown:hover .dropdown-content {
     display: block;
   }
 
-  /* SOCIALS */
 
   .socials {
     display: flex;

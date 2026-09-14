@@ -25,21 +25,49 @@ import Footer from "../components/Footer.astro";
       </div>
   
     </section>
+
+    <section class="image-grid">
+  <div class="image-card"><img src="/billede1.jpg" alt="" /></div>
+  <div class="image-card"><img src="/billede2.jpg" alt="" /></div>
+  <div class="image-card"><img src="/billede3.jpg" alt="" /></div>
+  <div class="image-card"><img src="/billede4.jpg" alt="" /></div>
+  <div class="image-card"><img src="/billede5.jpg" alt="" /></div>
+  <div class="image-card"><img src="/billede6.jpg" alt="" /></div>
+
+  <div class="image-card"><img src="/billede7.jpg" alt="" /></div>
+  <div class="image-card"><img src="/billede8.jpg" alt="" /></div>
+  <div class="image-card"><img src="/billede9.jpg" alt="" /></div>
+  <div class="image-card"><img src="/billede10.jpg" alt="" /></div>
+  <div class="image-card"><img src="/billede11.jpg" alt="" /></div>
+  <div class="image-card"><img src="/billede12.jpg" alt="" /></div>
+
+  <div class="image-card"><img src="/billede13.jpg" alt="" /></div>
+  <div class="image-card"><img src="/billede14.jpg" alt="" /></div>
+  <div class="image-card"><img src="/billede15.jpg" alt="" /></div>
+  <div class="image-card"><img src="/billede16.jpg" alt="" /></div>
+  <div class="image-card"><img src="/billede17.jpg" alt="" /></div>
+  <div class="image-card"><img src="/billede18.jpg" alt="" /></div>
+</section>
   </main>
 
 </Layout>
 
 <style>
-  .hero {
-    width: 100%;
-    min-height: 850px;
-    position: relative;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
+ .hero {
+  width: 100%;
+  min-height: 850px;
+  position: relative;
+
+  background-image: url("/forside-billede.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
 
   .hero-content {
     width: 100%;
@@ -67,16 +95,16 @@ import Footer from "../components/Footer.astro";
     align-items: center;
     font-size: 32px;
     font-weight: 700;
-    color: black;
+    color: white;
   }
 
   .festival-text {
-    margin-top: 55px;
+    margin-top: 50px;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    color: #ed0b15;
+    color: white;
     font-size: 22px;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 1.2;
   }
 
@@ -88,8 +116,8 @@ import Footer from "../components/Footer.astro";
   align-items: center;
   justify-content: center;
 
-  width: 230px;
-  height: 75px;
+  width: 210px;
+  height: 67px;
   margin: 100px auto 0;
 
   background-color: #ed0b15;
@@ -103,6 +131,26 @@ import Footer from "../components/Footer.astro";
   text-decoration: none;
 }
 
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  width: 90%;
+  margin: 80px auto;
+}
+
+.image-card {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
   @media (max-width: 900px) {
     .hero {
       min-height: 650px;

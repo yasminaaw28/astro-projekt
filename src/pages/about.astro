@@ -1,0 +1,320 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <main class="about-page">
+    <section class="about-hero">
+      <div class="about-intro">
+        <p class="eyebrow">ABOUT IMPACT FESTIVAL</p>
+
+        <h1>
+          MORE THAN<br />
+          JUST A FESTIVAL
+        </h1>
+
+        <p class="intro-text">Impact Festival brings people together through music, art, talks, workshops and food. The festival creates a space where people can meet, share ideas and take part in experiences focused on community, culture and positive change.</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="text-block">
+        <h2>ABOUT THE FESTIVAL</h2>
+
+        <p>Impact Festival takes place at Trifolium in Copenhagen and combines culture, music and activities in one festival experience.</p>
+
+        <p>The festival is built around participation. Visitors can experience live music, art, talks and workshops while also meeting new people and becoming part of the community around the festival.</p>
+      </div>
+
+      <div class="media-block">
+        <video controls>
+          <source src="/videos/pov.MP4" type="video/mp4" />
+        </video>
+      </div>
+    </section>
+
+    <section class="content-section reverse">
+      <div class="media-block">
+        <video controls>
+          <source src="/videos/vlog.MP4" type="video/mp4" />
+        </video>
+      </div>
+
+      <div class="text-block">
+        <h2>COMMUNITY & IMPACT</h2>
+
+        <p>Community is an important part of Impact Festival. The festival creates a place where people can meet, participate and experience something together.</p>
+
+        <p>Through talks, workshops, art, music and shared experiences, the festival creates space for new ideas, conversations and connections.</p>
+      </div>
+    </section>
+
+    <section class="video-section">
+      <div class="video-title">
+        <h2>EXPERIENCE THE FESTIVAL</h2>
+
+        <p>Get a feeling of the atmosphere, people and experiences at Impact Festival.</p>
+      </div>
+
+      <div class="large-video">
+        <video controls>
+          <source src="/videos/about-video-2.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </section>
+
+    <section class="program-section">
+      <div class="program-text">
+        <h2>THE PROGRAM</h2>
+
+        <p>The program includes music, art, talks, workshops and food. Visitors can explore different activities throughout the festival and create their own festival experience.</p>
+
+        <p>The program makes it easy to see what is happening during the festival and choose which experiences you want to take part in.</p>
+      </div>
+
+      <div class="program-poster">
+        <img src="/poster.png" alt="Impact Festival program" />
+      </div>
+    </section>
+
+    <section class="trifolium-section">
+      <div class="trifolium-image">
+        <img src="/logoer.png" alt="Trifolium" />
+      </div>
+
+      <div class="trifolium-text">
+        <h2>IMPACT FESTIVAL & TRIFOLIUM</h2>
+        <p>Impact Festival is connected to Trifolium. The festival brings people together around culture, community and positive change.</p>
+
+        <p>Through Impact Festival, visitors can experience Trifolium and learn more about the ideas and community behind the place.</p>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .about-page {
+    width: 100%;
+    background: #fff;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .about-hero {
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    padding: 100px 7% 50px;
+    box-sizing: border-box;
+  }
+
+  .about-intro {
+    max-width: 1100px;
+  }
+
+  .eyebrow {
+    margin: 0 0 25px;
+    color: #ed0b15;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .about-hero h1 {
+    margin: 0;
+    font-size: clamp(60px, 7vw, 120px);
+    line-height: 0.82;
+    font-weight: 900;
+  }
+
+  .intro-text {
+    max-width: 700px;
+    margin: 60px 0 0;
+    font-size: 22px;
+    line-height: 1.5;
+  }
+
+  .content-section {
+    width: 86%;
+    margin: 0 auto;
+    padding: 70px 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 100px;
+    align-items: center;
+  }
+
+  .content-section.reverse {
+    grid-template-columns: 1.2fr 1fr;
+  }
+
+  .text-block h2,
+  .video-title h2,
+  .program-text h2,
+  .trifolium-section h2 {
+    margin: 0 0 35px;
+    font-size: clamp(45px, 5vw, 80px);
+    line-height: 0.95;
+    font-weight: 900;
+  }
+
+  .text-block p,
+  .program-text p,
+  .trifolium-section p,
+  .video-title p {
+    max-width: 650px;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .media-block {
+    width: 100%;
+    height: 550px;
+    overflow: hidden;
+    background: #eee;
+  }
+
+  .media-block img,
+  .media-block video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* STOR VIDEO */
+
+  .video-section {
+    width: 86%;
+    margin: 0 auto;
+    padding: 120px 0;
+  }
+
+  .video-title {
+    margin-bottom: 50px;
+  }
+
+  .large-video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #111;
+    overflow: hidden;
+  }
+
+  .large-video video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  .program-section {
+    width: 86%;
+    margin: 0 auto;
+    padding: 120px 0;
+
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    gap: 120px;
+    align-items: center;
+  }
+
+  .program-poster img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .trifolium-section {
+    width: 86%;
+    margin: 0 auto;
+    padding: 80px 0 50px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: center;
+  }
+
+  .trifolium-image {
+    width: 100%;
+  }
+
+  .trifolium-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .trifolium-text {
+    width: 100%;
+  }
+
+  .trifolium-text h2 {
+    margin: 0 0 35px;
+    font-size: clamp(45px, 5vw, 80px);
+    line-height: 0.95;
+    font-weight: 900;
+  }
+
+  .trifolium-text p {
+    max-width: 650px;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  .media-block {
+    display: flex;
+    justify-content: center;
+    background: white;
+    height: auto;
+  }
+
+  .media-block video {
+    width: auto;
+    height: 650px;
+    max-width: 100%;
+    display: block;
+  }
+  /* MOBIL */
+
+  @media (max-width: 900px) {
+    .about-hero {
+      min-height: auto;
+      padding: 80px 20px;
+    }
+
+    .about-hero h1 {
+      font-size: 60px;
+    }
+
+    .intro-text {
+      margin-top: 40px;
+      font-size: 18px;
+    }
+
+    .content-section,
+    .content-section.reverse,
+    .program-section {
+      width: calc(100% - 40px);
+      grid-template-columns: 1fr;
+      gap: 50px;
+      padding: 80px 0;
+    }
+
+    .media-block {
+      height: 400px;
+    }
+
+    .video-section,
+    .trifolium-section {
+      width: calc(100% - 40px);
+      padding: 80px 0;
+    }
+
+    .text-block h2,
+    .video-title h2,
+    .program-text h2,
+    .trifolium-section h2 {
+      font-size: 46px;
+    }
+  }
+</style>
