@@ -49,16 +49,16 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </section>
 
-    <section class="video-section">
-      <div class="video-title">
-        <h2>EXPERIENCE THE FESTIVAL</h2>
+    <section class="content-section">
+      <div class="text-block">
+        <h2>SUSTAINABILITY IN ACTION</h2>
 
-        <p>Get a feeling of the atmosphere, people and experiences at Impact Festival.</p>
+        <p>See how Impact Festival brings sustainability to life through small actions, creative ideas and experiences throughout the festival.</p>
       </div>
 
-      <div class="large-video">
+      <div class="media-block">
         <video controls>
-          <source src="/videos/about-video-2.mp4" type="video/mp4" />
+          <source src="/videos/bæredygtig.MP4" type="video/mp4" />
         </video>
       </div>
     </section>
@@ -67,9 +67,9 @@ import Layout from "../layouts/Layout.astro";
       <div class="program-text">
         <h2>THE PROGRAM</h2>
 
-        <p>The program includes music, art, talks, workshops and food. Visitors can explore different activities throughout the festival and create their own festival experience.</p>
+        <p>The Impact Festival program brings together music, art, talks, workshops, food and other experiences across two festival days.</p>
 
-        <p>The program makes it easy to see what is happening during the festival and choose which experiences you want to take part in.</p>
+        <p>The poster gives an overview of the artists, speakers, workshops and activities taking place on 11–12 September 2026.</p>
       </div>
 
       <div class="program-poster">
@@ -84,6 +84,7 @@ import Layout from "../layouts/Layout.astro";
 
       <div class="trifolium-text">
         <h2>IMPACT FESTIVAL & TRIFOLIUM</h2>
+
         <p>Impact Festival is connected to Trifolium. The festival brings people together around culture, community and positive change.</p>
 
         <p>Through Impact Festival, visitors can experience Trifolium and learn more about the ideas and community behind the place.</p>
@@ -94,7 +95,6 @@ import Layout from "../layouts/Layout.astro";
 
 <style>
   .about-page {
-    width: 100%;
     background: #fff;
     color: #000;
     font-family: Arial, Helvetica, sans-serif;
@@ -137,7 +137,6 @@ import Layout from "../layouts/Layout.astro";
     width: 86%;
     margin: 0 auto;
     padding: 70px 0;
-
     display: grid;
     grid-template-columns: 1fr 1.2fr;
     gap: 100px;
@@ -149,9 +148,7 @@ import Layout from "../layouts/Layout.astro";
   }
 
   .text-block h2,
-  .video-title h2,
-  .program-text h2,
-  .trifolium-section h2 {
+  .program-text h2 {
     margin: 0 0 35px;
     font-size: clamp(45px, 5vw, 80px);
     line-height: 0.95;
@@ -159,60 +156,29 @@ import Layout from "../layouts/Layout.astro";
   }
 
   .text-block p,
-  .program-text p,
-  .trifolium-section p,
-  .video-title p {
+  .program-text p {
     max-width: 650px;
     font-size: 18px;
     line-height: 1.6;
   }
 
   .media-block {
-    width: 100%;
-    height: 550px;
-    overflow: hidden;
-    background: #eee;
+    display: flex;
+    justify-content: center;
+    background: white;
   }
 
-  .media-block img,
   .media-block video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: auto;
+    height: 650px;
+    max-width: 100%;
     display: block;
-  }
-
-  /* STOR VIDEO */
-
-  .video-section {
-    width: 86%;
-    margin: 0 auto;
-    padding: 120px 0;
-  }
-
-  .video-title {
-    margin-bottom: 50px;
-  }
-
-  .large-video {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    background: #111;
-    overflow: hidden;
-  }
-
-  .large-video video {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
   }
 
   .program-section {
     width: 86%;
     margin: 0 auto;
     padding: 120px 0;
-
     display: grid;
     grid-template-columns: 1fr 0.8fr;
     gap: 120px;
@@ -224,29 +190,21 @@ import Layout from "../layouts/Layout.astro";
     height: auto;
     display: block;
   }
+
   .trifolium-section {
     width: 86%;
     margin: 0 auto;
     padding: 80px 0 50px;
-
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 100px;
     align-items: center;
   }
 
-  .trifolium-image {
-    width: 100%;
-  }
-
   .trifolium-image img {
     width: 100%;
     height: auto;
     display: block;
-  }
-
-  .trifolium-text {
-    width: 100%;
   }
 
   .trifolium-text h2 {
@@ -261,20 +219,6 @@ import Layout from "../layouts/Layout.astro";
     font-size: 18px;
     line-height: 1.6;
   }
-  .media-block {
-    display: flex;
-    justify-content: center;
-    background: white;
-    height: auto;
-  }
-
-  .media-block video {
-    width: auto;
-    height: 650px;
-    max-width: 100%;
-    display: block;
-  }
-  /* MOBIL */
 
   @media (max-width: 900px) {
     .about-hero {
@@ -300,20 +244,20 @@ import Layout from "../layouts/Layout.astro";
       padding: 80px 0;
     }
 
-    .media-block {
+    .media-block video {
       height: 400px;
     }
 
-    .video-section,
     .trifolium-section {
       width: calc(100% - 40px);
       padding: 80px 0;
+      grid-template-columns: 1fr;
+      gap: 50px;
     }
 
     .text-block h2,
-    .video-title h2,
     .program-text h2,
-    .trifolium-section h2 {
+    .trifolium-text h2 {
       font-size: 46px;
     }
   }

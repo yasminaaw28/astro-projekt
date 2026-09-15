@@ -1,14 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
 ---
 
 <Layout>
   <main>
     <section class="hero">
-      <div class="overlay"></div>
-
       <div class="hero-content">
         <img src="/forside-logo.png" alt="Impact Festival" class="hero-logo" />
 
@@ -21,53 +17,52 @@ import Footer from "../components/Footer.astro";
           <p>MUSIC // ART // TALKS // WORKSHOPS // FOOD</p>
           <p>DESIGNED TO INCREASE OUR IMPACT</p>
         </div>
+
         <a href="/tickets" class="ticket-button">TICKETS</a>
       </div>
-  
     </section>
 
     <section class="image-grid">
-  <div class="image-card"><img src="/billede1.jpg" alt="" /></div>
-  <div class="image-card"><img src="/billede2.jpg" alt="" /></div>
-  <div class="image-card"><img src="/billede3.jpg" alt="" /></div>
-  <div class="image-card"><img src="/billede4.jpg" alt="" /></div>
-  <div class="image-card"><img src="/billede5.jpg" alt="" /></div>
-  <div class="image-card"><img src="/billede6.jpg" alt="" /></div>
+      <div class="image-card"><img src="/billede1.jpg" alt="" /></div>
+      <div class="image-card"><img src="/billede2.jpg" alt="" /></div>
+      <div class="image-card"><img src="/billede3.jpg" alt="" /></div>
+      <div class="image-card"><img src="/billede4.jpg" alt="" /></div>
+      <div class="image-card"><img src="/billede5.jpg" alt="" /></div>
+      <div class="image-card"><img src="/billede6.jpg" alt="" /></div>
 
-  <div class="image-card"><img src="/billede7.jpg" alt="" /></div>
-  <div class="image-card"><img src="/billede8.jpg" alt="" /></div>
-  <div class="image-card"><img src="/billede9.jpg" alt="" /></div>
-  <div class="image-card"><img src="/billede10.jpg" alt="" /></div>
-  <div class="image-card"><img src="/billede11.jpg" alt="" /></div>
-  <div class="image-card"><img src="/billede12.jpg" alt="" /></div>
+      <div class="image-card"><img src="/billede7.jpg" alt="" /></div>
+      <div class="image-card"><img src="/billede8.jpg" alt="" /></div>
+      <div class="image-card"><img src="/billede9.jpg" alt="" /></div>
+      <div class="image-card"><img src="/billede10.jpg" alt="" /></div>
+      <div class="image-card"><img src="/billede11.jpg" alt="" /></div>
+      <div class="image-card"><img src="/billede12.jpg" alt="" /></div>
 
-  <div class="image-card"><img src="/billede13.jpg" alt="" /></div>
-  <div class="image-card"><img src="/billede14.jpg" alt="" /></div>
-  <div class="image-card"><img src="/billede15.jpg" alt="" /></div>
-  <div class="image-card"><img src="/billede16.jpg" alt="" /></div>
-  <div class="image-card"><img src="/billede17.jpg" alt="" /></div>
-  <div class="image-card"><img src="/billede18.jpg" alt="" /></div>
-</section>
+      <div class="image-card"><img src="/billede13.jpg" alt="" /></div>
+      <div class="image-card"><img src="/billede14.jpg" alt="" /></div>
+      <div class="image-card"><img src="/billede15.jpg" alt="" /></div>
+      <div class="image-card"><img src="/billede16.jpg" alt="" /></div>
+      <div class="image-card"><img src="/billede17.jpg" alt="" /></div>
+      <div class="image-card"><img src="/billede18.jpg" alt="" /></div>
+    </section>
   </main>
-
 </Layout>
 
 <style>
- .hero {
-  width: 100%;
-  min-height: 850px;
-  position: relative;
+  .hero {
+    width: 100%;
+    min-height: 850px;
+    position: relative;
 
-  background-image: url("/forside-billede.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+    background-image: url("/forside-billede.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
 
   .hero-content {
     width: 100%;
@@ -89,10 +84,12 @@ import Footer from "../components/Footer.astro";
     width: 1100px;
     max-width: 72vw;
     margin: -40px auto 0;
-    font-family: Arial, Helvetica, sans-serif;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 32px;
     font-weight: 700;
     color: white;
@@ -101,6 +98,7 @@ import Footer from "../components/Footer.astro";
   .festival-text {
     margin-top: 50px;
     text-align: center;
+
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     font-size: 22px;
@@ -111,46 +109,49 @@ import Footer from "../components/Footer.astro";
   .festival-text p {
     margin: 5px 0;
   }
+
   .ticket-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  width: 210px;
-  height: 67px;
-  margin: 100px auto 0;
+    width: 210px;
+    height: 67px;
+    margin: 100px auto 0;
 
-  background-color: #ed0b15;
-  color: white;
-  border: 2px solid white;
-  border-radius: 50px;
+    background-color: #ed0b15;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50px;
 
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
-  font-weight: 400;
-  text-decoration: none;
-}
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    text-decoration: none;
+  }
 
-.image-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 20px;
-  width: 90%;
-  margin: 80px auto;
-}
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
 
-.image-card {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  overflow: hidden;
-}
+    width: 90%;
+    margin: 80px auto;
+  }
 
-.image-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
+  .image-card {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+  }
+
+  .image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
   @media (max-width: 900px) {
     .hero {
       min-height: 650px;
@@ -170,6 +171,5 @@ import Footer from "../components/Footer.astro";
       margin-top: 35px;
       font-size: 16px;
     }
-    
- 
+  }
 </style>
